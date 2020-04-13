@@ -1,0 +1,28 @@
+.App{
+    display: block;
+    font-family: "calibri"!important;
+    width: 100%;
+}
+
+.default-textfield {
+    display: block;
+}
+.default-textfield-label {
+
+}
+
+.default-textfield-fieldname {
+    display: inline;
+    font-weight: 400;
+    font-size: 24px;
+    margin-right: 10px;
+}
+.default-inputCls input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.default-inputCls input[type=number] {
+    -moz-appearance: textfield;
+}

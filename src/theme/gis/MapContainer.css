@@ -1,0 +1,7 @@
+.map-container-wrap {
+    background: #3f3f3f;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: inline-block;
+}
