@@ -3,22 +3,15 @@ import '../../theme/gis/MapContainer.css'
 
 import MapReact from "./MapReact";
 
-export default class MapContainer extends React.Component{
-    constructor(props) {
-        super(props);
-        this.style = {
+const MapContainer = (props)=>{
+        const style = {
             width: `${window.innerWidth - 470.0}px`
         }
-    }
-
-    render() {
         return (
             <div className={'map-container-wrap'}
-                style={this.style}>
+                style={style}>
                     <MapReact key={'gis-map'}/>
             </div>
         );
-    }
-
-
 }
+export default MapContainer;
