@@ -1,42 +1,32 @@
 import React from "react";
 
-export default class TextField extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.fieldName = `${this.props.fieldName}:` || '';
-        this.fieldValue = this.props.fieldValue || '';
-        this.inputCls = `default-inputCls ${this.props.inputCls}` || 'default-inputCls';
-        this.fieldStyle = this.props.fieldStyle || {};
-        this.readOnly = this.props.readOnly || false;
-        this.parent = this.props.parent || {}
-        this.type = this.props.type || 'text'
-
-        this.state = {value: this.fieldValue};
-    }
-
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        if(prevState.value === this.props.fieldValue) {
+const TextField =(props)=> {
+        const fieldName = `${props.fieldName}:` || '';
+        const fieldValue = props.fieldValue || '';
+        const inputCls = `default-inputCls ${props.inputCls}` || 'default-inputCls';
+        const fieldStyle = props.fieldStyle || {};
+        const readOnly = props.readOnly || false;
+        const type = props.type || 'text';
+        const state = {value: fieldValue};
+   const componentDidUpdate = (prevProps, prevState, snapshot) =>{
+        if(prevState.value === props.fieldValue) {
             return;
         }
-        this.fieldValue = this.props.fieldValue;
-        this.setState({value: this.fieldValue});
+        fieldValue = props.fieldValue;
+        const setState=({value: fieldValue});
     }
-
-    render() {
         return (
             <div className='default-textfield'>
                 <label className='default-textfield-label'>
-                    <div className='default-textfield-fieldname'>{this.fieldName}</div>
+                    <div className='default-textfield-fieldname'>{fieldName}</div>
                     <input
-                        style={this.fieldStyle}
-                        className={this.inputCls}
-                        type={this.type}
-                        value={this.state.value}
-                        readOnly={this.readOnly}/>
+                        style={fieldStyle}
+                        className={inputCls}
+                        type={type}
+                        value={state.value}
+                        readOnly={readOnly}/>
                 </label>
             </div>
         );
-    }
-
 }
+export default TextField;

@@ -17,40 +17,31 @@ function setDMSFormat(value = '') {
     return `${degrees}°${minutes}'${seconds.toFixed(2)}"`
 }
 
-class ControlPanel extends React.Component{
-    constructor(props) {
-        super(props);
-        this.title = this.props.title || lang.controlPanel.title;
-
-    }
-
-    render() {
+const ControlPanel = (props)=>{
+        const title = props.title || lang.controlPanel.title;
         return (
             <div className={'control-panel'}>
                 <header className={'panel-header'}>
-                    {this.title}
+                    {title}
                 </header>
                 <div className={'panel-body'}>
                     <TextField
                         type={'text'}
                         key={'latitudeTextField'}
                         inputCls={'panel-textfield'}
-                        parent={this}
                         readOnly={true}
                         fieldName={lang.controlPanel.fields.latitude}
-                        fieldValue={setDMSFormat(this.props.store.lat)}/>
+                        fieldValue={setDMSFormat(props.store.lat)}/>
                     <TextField
                         type={'text'}
                         key={'longitudeTextField'}
-                        fieldValue={setDMSFormat(this.props.store.lng)}
                         inputCls={'panel-textfield'}
                         readOnly={true}
-                        parent={this}
-                        fieldName={lang.controlPanel.fields.longitude}/>
+                        fieldName={lang.controlPanel.fields.longitude}
+                        fieldValue={setDMSFormat(props.store.lng)}/>
                 </div>
             </div>
         );
-    }
 }
 
 function mapStateToProps(state) {
