@@ -2,10 +2,7 @@ import React from "react";
 import '../../theme/gis/MapContainer.css'
 
 import MapReact from "./MapReact";
-/**
- *@MapContainer 
- *применяет параметры для блока gis- карты,
-**/
+
 const MapContainer = (props)=>{
         const style = {
             width: `${window.innerWidth - 470.0}px`
