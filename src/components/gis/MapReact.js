@@ -8,9 +8,10 @@ import {connect} from 'react-redux';
 import {actionTypes} from "../../ActionTypes";
 
 const MapReact = (props)=>{
-        const store = props.store || {};
-        const zoom= 13;
-        const position = [store.lat, store.lng];
+        const store = props.store || {},
+        zoom= 13,
+        //Tomsk start position
+        position = [store.lat, store.lng];
         return (
             <Map className={'map'} center={position} zoom={zoom} onClick={props.mapClick}>
                 <TileLayer
