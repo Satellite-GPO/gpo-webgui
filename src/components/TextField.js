@@ -2,19 +2,15 @@ import React from "react";
 
 const TextField =(props)=> {
         const fieldName = `${props.fieldName}:` || '',
-        fieldValue = props.fieldValue || '',
         inputCls = `default-inputCls ${props.inputCls}` || 'default-inputCls',
         fieldStyle = props.fieldStyle || {},
         readOnly = props.readOnly || false,
-        type = props.type || 'text';
-   const componentDidUpdate = (prevProps, prevState, snapshot) =>{
-        if(prevState.value === props.fieldValue) {
-            return;
-        }
-        fieldValue = props.fieldValue;
-    }
+        type = props.type || 'text',
+        fieldValue = props.fieldValue || '';
+    if(props.fieldValue!=='0')
+    {
         return (
-            <div className='default-textfield'>
+                <div className='default-textfield'>
                 <label className='default-textfield-label'>
                     <div className='default-textfield-fieldname'>{fieldName}</div>
                     <input
@@ -26,5 +22,21 @@ const TextField =(props)=> {
                 </label>
             </div>
         );
+    }
+    else
+    {
+        return (
+            <div className='default-textfield'>
+            <label className='default-textfield-label'>
+                <div className='default-textfield-fieldname'>{fieldName}</div>
+                <input
+                    style={fieldStyle}
+                    className={inputCls}
+                    type={type}
+                    readOnly={readOnly}/>
+            </label>
+        </div>
+    );
+    }
 }
 export default TextField;

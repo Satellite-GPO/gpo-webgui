@@ -3,7 +3,9 @@ export const ru = {
         title: 'Панель управления',
         fields: {
             latitude: 'Широта',
-            longitude: 'Долгота'
+            longitude: 'Долгота',
+            from: 'Время от',
+            to: 'Время до'
         }
     },
 

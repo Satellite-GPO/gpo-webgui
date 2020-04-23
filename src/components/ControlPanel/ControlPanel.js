@@ -16,7 +16,6 @@ function setDMSFormat(value = '') {
         seconds = parseFloat((value-parseFloat(degrees)-minutes/60)*3600)
     return `${degrees}°${minutes}'${seconds.toFixed(2)}"`
 }
-
 const ControlPanel = (props)=>{
         const title = props.title || lang.controlPanel.title;
         return (
@@ -39,6 +38,21 @@ const ControlPanel = (props)=>{
                         readOnly={true}
                         fieldName={lang.controlPanel.fields.longitude}
                         fieldValue={setDMSFormat(props.store.lng)}/>
+                     <TextField
+                        type={'datetime-local'}
+                        key={'fromTimeTextField'}
+                        inputCls={'panel-textfield'}
+                        readOnly={false}
+                        fieldName={lang.controlPanel.fields.from}
+                        fieldValue={'0'}/>
+                     <TextField
+                        type={'datetime-local'}
+                        key={'toTimeTextField'}
+                        inputCls={'panel-textfield'}
+                        readOnly={false}
+                        fieldName={lang.controlPanel.fields.to}
+                        fieldValue={'0'}/>
+                    
                 </div>
             </div>
         );
