@@ -43,16 +43,13 @@ const ControlPanel = (props)=>{
                         key={'fromTimeTextField'}
                         inputCls={'panel-textfield'}
                         readOnly={false}
-                        fieldName={lang.controlPanel.fields.from}
-                        fieldValue={'0'}/>
+                        fieldName={lang.controlPanel.fields.from}/>
                      <TextField
                         type={'datetime-local'}
                         key={'toTimeTextField'}
                         inputCls={'panel-textfield'}
                         readOnly={false}
-                        fieldName={lang.controlPanel.fields.to}
-                        fieldValue={'0'}/>
-                    
+                        fieldName={lang.controlPanel.fields.to}/>
                 </div>
             </div>
         );
