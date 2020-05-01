@@ -5,7 +5,8 @@ import {lang} from '../../lang/lang.js'
 import {connect} from 'react-redux';
 
 import TextField from "../TextField";
-
+import PushButton from "../PushButton";
+import { LatLng } from "leaflet";
 
 function setDMSFormat(value = '') {
     if(value === '') {
@@ -50,6 +51,12 @@ const ControlPanel = (props)=>{
                         inputCls={'panel-textfield'}
                         readOnly={false}
                         fieldName={lang.controlPanel.fields.to}/>
+                     <PushButton 
+                        buttonText={lang.controlPanel.fields.send}
+                        onClick={ ()=>{return 'Результат' }}
+                        key={'pushbuttonSend'}
+                        btnCls={'panel-pushbuttonSend'}
+                     />
                 </div>
             </div>
         );
