@@ -6,16 +6,14 @@ import React from "react";
  * key - ключ
  * btnCls - класс для стилей кнопки
  **/
-const PushButton = props =>{
-    var buttonText = props.buttonText;
-    const onClick = props.onClick,
-    btnCls=props.btnCls;
-    return (
-        <div className='default-pushbutton'>
+const PushButton = props => {
+        const buttonText = props.buttonText || '',
+        onClick = props.onClick || {},
+        btnCls = props.btnCls || 'default-pushbutton';
+        return (
                 <div className = {btnCls} onClick = {onClick()}>
                     {buttonText}
                 </div>
-        </div>
-    );
+        );
 }
 export default PushButton;

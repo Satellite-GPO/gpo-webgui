@@ -53,7 +53,7 @@ const ControlPanel = (props)=>{
                         fieldName={lang.controlPanel.fields.to}/>
                      <PushButton 
                         buttonText={lang.controlPanel.fields.send}
-                        onClick={ ()=>{return 'Результат' }}
+                        onClick={ ()=>{}}
                         key={'pushbuttonSend'}
                         btnCls={'panel-pushbuttonSend'}
                      />
