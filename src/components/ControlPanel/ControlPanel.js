@@ -17,7 +17,7 @@ function setDMSFormat(value = '') {
         seconds = parseFloat((value-parseFloat(degrees)-minutes/60)*3600)
     return `${degrees}°${minutes}'${seconds.toFixed(2)}"`
 }
-const ControlPanel = (props)=>{
+const ControlPanel = props => {
         const title = props.title || lang.controlPanel.title;
         return (
             <div className={'control-panel'}>

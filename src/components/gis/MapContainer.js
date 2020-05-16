@@ -3,7 +3,7 @@ import '../../theme/gis/MapContainer.css'
 
 import MapReact from "./MapReact";
 
-const MapContainer = (props)=>{
+const MapContainer = props => {
         const style = {
             width: `${window.innerWidth - 470.0}px`
         }

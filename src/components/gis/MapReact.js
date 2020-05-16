@@ -7,7 +7,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {actionTypes} from "../../ActionTypes";
 
-const MapReact = (props)=>{
+const MapReact = props => {
         const store = props.store || {},
         zoom= 13,
         //Tomsk start position

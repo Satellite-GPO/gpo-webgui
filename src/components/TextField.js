@@ -1,6 +1,6 @@
 import React from "react";
 
-const TextField =(props)=> {
+const TextField = props => {
         const fieldName = `${props.fieldName}:` || '',
         inputCls = `default-inputCls ${props.inputCls}` || 'default-inputCls',
         fieldStyle = props.fieldStyle || {},
