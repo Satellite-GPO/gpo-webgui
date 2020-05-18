@@ -7,10 +7,13 @@
 .default-textfield {
     display: block;
 }
+.default-pushbutton {
+    display: block;
+    text-align: center;
+}
 .default-textfield-label {
 
 }
-
 .default-textfield-fieldname {
     display: inline;
     font-weight: 400;

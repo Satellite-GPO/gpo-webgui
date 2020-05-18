@@ -5,7 +5,8 @@ export const ru = {
             latitude: 'Широта',
             longitude: 'Долгота',
             from: 'Время от',
-            to: 'Время до'
+            to: 'Время до',
+            send:'Отправить'
         }
     },
 
