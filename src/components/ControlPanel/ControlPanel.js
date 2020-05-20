@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "../../theme/ControlPanel/ControlPanel.css"
 import {lang} from '../../lang/lang.js'
 
@@ -19,8 +19,18 @@ function setDMSFormat(value = '') {
 }
 const ControlPanel = props => {
         const title = props.title || lang.controlPanel.title;
+        const [style,setStyle] = useState({height: window.innerHeight+'px'})
+        useEffect(() => {
+            setStyle({height: window.innerHeight+'px'})
+        })
         return (
-            <div className={'control-panel'}>
+            <div className={'control-panel'} style={style} > 
+                    <PushButton 
+                        buttonText={lang.controlPanel.fields.send}
+                        onClick={ ()=>{}}
+                        key={'pushbuttonSend'}
+                        btnCls={'panel-pushbuttonSend'}
+                     />
                 <header className={'panel-header'}>
                     {title}
                 </header>
@@ -51,12 +61,6 @@ const ControlPanel = props => {
                         inputCls={'panel-textfield'}
                         readOnly={false}
                         fieldName={lang.controlPanel.fields.to}/>
-                     <PushButton 
-                        buttonText={lang.controlPanel.fields.send}
-                        onClick={ ()=>{}}
-                        key={'pushbuttonSend'}
-                        btnCls={'panel-pushbuttonSend'}
-                     />
                 </div>
             </div>
         );
