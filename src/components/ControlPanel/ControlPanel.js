@@ -19,9 +19,14 @@ function setDMSFormat(value = '') {
 }
 const ControlPanel = props => {
         const title = props.title || lang.controlPanel.title;
-        const [style,setStyle] = useState({height: window.innerHeight+'px'})
+        let startHeight;
+        if(window.innerHeight>420)
+            startHeight=window.innerHeight
+        else
+            startHeight=420
+        const [style,setStyle] = useState({height: startHeight+'px'})
         useEffect(() => {
-            setStyle({height: window.innerHeight+'px'})
+                setStyle({height: window.innerHeight+'px'})
         })
         return (
             <div className={'control-panel'} style={style} > 

@@ -8,10 +8,10 @@ import ControlPanel from "./components/ControlPanel/ControlPanel";
 function App() {
     const [style,setStyle] = useState({width: window.innerwidth+'px',height: window.innerHeight+'px'})
     useEffect(() => {
-        setStyle({
-            width: '100%',
-            height: window.innerHeight+'px'
-        })
+            setStyle({
+                width: window.innerWidth+'px',
+                height: window.innerHeight+'px'
+            })
     })
     return (
         <div className="App" style={style}>

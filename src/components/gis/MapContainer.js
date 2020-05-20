@@ -6,8 +6,8 @@ import MapReact from "./MapReact";
 const MapContainer = props => {
     const [style,setStyle] = useState({width: window.innerWidth-20+'px',height: window.innerHeight-20+'px'})
     useEffect(() => {
-        setStyle({width: window.innerWidth-(window.innerWidth/100*24)-10+'px',height: window.innerHeight+'px'})
-    })
+        setStyle({width: window.innerWidth-450-20+'px',height: window.innerHeight+'px'})
+    },[window.innerWidth,window.innerHeight])
     return (
         <div className={'map-container-wrap'}
             style={style}>

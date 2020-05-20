@@ -1,5 +1,6 @@
 .control-panel{
     width: 450px;
+    min-height: 420px;
     background-color: whitesmoke;
     display: inline-block;
     padding: 0 10px 0 10px;
