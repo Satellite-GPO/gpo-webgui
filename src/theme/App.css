@@ -10,6 +10,17 @@
 .default-pushbutton {
     display: block;
     text-align: center;
+    height: 30px;
+    border: 1px rgba(126,126,126,0.75) solid;
+    border-radius: 4px;
+    width: 110px;
+    font-size:18px;
+    padding-top:5px;
+    color: #404040;
+    font-weight: 400;
+    background: #e8e8e8;
+    box-shadow: inset 0 0 1px 1px rgba(126, 126, 126, 0.3);
+    cursor: pointer;
 }
 .default-textfield-label {
 
