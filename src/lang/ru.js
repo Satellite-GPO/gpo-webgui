@@ -11,6 +11,8 @@ export const ru = {
     },
     saveBtn: 'Сохранить',
     cancelBtn: 'Отмена',
+    closeBtn: 'Закрыть',
+
     graphWindow: {
         saveDataWin: {
             title: 'Получение данных',
