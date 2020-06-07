@@ -11,9 +11,7 @@ import {actionTypes} from "../../ActionTypes";
 import TextField from "../TextField";
 import PushButton from "../PushButton";
 import Graph from "../Graph/Graph";
-import Window from "../Window";
 
-import jsonResponse from "../../response.json"
 
 /**
 * ControlPanel - панель управления
@@ -25,9 +23,10 @@ import jsonResponse from "../../response.json"
 * */
 const ControlPanel = props => {
     const [graph, setGraphVisible] = React.useState(false);
-    const title = props.title || lang.controlPanel.title;
+    const title = props.title || lang.controlPanel.title,
+        style={height: `${window.innerHeight}px`}
     return (
-        <div id={'controlPanel'} className={'control-panel'} onClick={onTimeRangeChange}>
+        <div id={'controlPanel'} className={'control-panel'} onClick={onTimeRangeChange} style={style}>
             <header className={'panel-header'}>
                 {title}
             </header>
@@ -66,7 +65,7 @@ const ControlPanel = props => {
                     key={'pushButtonSend'}
                     btnCls={'panel-pushButtonSend'}
                 />
-                {graph ? graph : null}
+                {graph}
             </div>
         </div>
     );
@@ -98,10 +97,10 @@ function setDMSFormat(value = '') {
 * @param {Function} setGraphVisibleCall - функция-вызов графа
 * */
 async function sendData(params, setGraphVisibleCall) {
-    // if(!isFormDataValid(params)){
-    //     alert('Form is not valid!')
-    //     return;
-    // }
+    if(!isFormDataValid(params)){
+        alert('Form is not valid!')
+        return;
+    }
     const timeRange = {
         from: params.from,
         to: params.to
@@ -111,11 +110,13 @@ async function sendData(params, setGraphVisibleCall) {
     try{
         await RequestAPI.POST(URL.getSignalData, params).then(r => response = r);
     }catch (e) {
-        response = jsonResponse;
+        console.error(e);
+        return;
     }
 
     //  Переводим данные в формат: {День - Значение сигнала}
     response.data = response.data.map((item, index) => {return {day: index+1, y: item}});
+
     await getResponseData(response, timeRange, setGraphVisibleCall)
 }
 /**
@@ -133,48 +134,8 @@ async function getResponseData(response, timeRange, setGraphVisibleCall) {
         console.error(response.error_code)
         return;
     }
-    const saveWin =
-    <Window isModal={true}
-        title={lang.graphWindow.saveDataWin.title}
-        className={'save-data-window'}>
-        <div>
-            <label>
-                <input type='checkbox' aria-label={'as'}/>
-                {lang.graphWindow.saveDataWin.saveSvg}
-            </label>
-        </div>
-        <div>
-            <label>
-                <input type='checkbox' aria-label={'as'}/>
-                {lang.graphWindow.saveDataWin.saveData}
-            </label>
-        </div>
-        <div className={'bottom-bar'}>
-            <PushButton btnCls={'save-data-window-saveBtn'}
-                        buttonText={lang.saveBtn}/>
-        </div>
-    </Window>;
 
-    setGraphVisibleCall(<Graph data={response.data} timeRange={timeRange} saveWin={<Window isModal={true}
-                                                                                           title={lang.graphWindow.saveDataWin.title}
-                                                                                           className={'save-data-window'}>
-        <div>
-            <label>
-                <input type='checkbox' aria-label={'as'}/>
-                {lang.graphWindow.saveDataWin.saveSvg}
-            </label>
-        </div>
-        <div>
-            <label>
-                <input type='checkbox' aria-label={'as'}/>
-                {lang.graphWindow.saveDataWin.saveData}
-            </label>
-        </div>
-        <div className={'bottom-bar'}>
-            <PushButton btnCls={'save-data-window-saveBtn'}
-                        buttonText={lang.saveBtn}/>
-        </div>
-    </Window>}/>);
+    setGraphVisibleCall(<Graph key="test" data={response.data} timeRange={timeRange} setGraphVisible={(isVisible) => {setGraphVisibleCall(isVisible)}}/>);
 }
 
 /**
