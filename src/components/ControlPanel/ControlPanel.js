@@ -22,7 +22,8 @@ import Graph from "../Graph/Graph";
 * @param {Object} props.store  - динамические данные в панели управления
 * */
 const ControlPanel = props => {
-    const [graph, setGraphVisible] = React.useState(false);
+    const [graph, setGraphVisible] = React.useState(false),
+        [sendBtnDisabled,setSendBtnDisabled] = React.useState(false);
     const title = props.title || lang.controlPanel.title,
         style={height: `${window.innerHeight}px`}
     return (
@@ -61,8 +62,13 @@ const ControlPanel = props => {
                     fieldName={lang.controlPanel.fields.to}/>
                 <PushButton
                     buttonText={lang.controlPanel.fields.send}
-                    onClick={() => {sendData(props.store, setGraphVisible)}}
+                    onClick={() => {
+                        sendData(props.store, setGraphVisible);
+                        setSendBtnDisabled(true);
+                        }
+                    }
                     key={'pushButtonSend'}
+                    isDisabled = {sendBtnDisabled}
                     btnCls={'panel-pushButtonSend'}
                 />
                 {graph}
