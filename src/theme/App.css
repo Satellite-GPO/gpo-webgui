@@ -22,6 +22,11 @@
     box-shadow: inset 0 0 1px 1px rgba(126, 126, 126, 0.3);
     cursor: pointer;
 }
+
+.default-pushbutton-disabled {
+    opacity: 0.9;
+    cursor: default;
+}
 .default-textfield-label {
 
 }
