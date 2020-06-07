@@ -1,11 +1,262 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ab29afaa-1bcb-41c1-b48c-a7ba9982ec94" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Window.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Urls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ControlPanel/ControlPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ControlPanel/ControlPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Graph/Graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Graph/Graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PushButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PushButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/gis/MapContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gis/MapContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lang/ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lang/ru.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/Graph/Graph.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/Graph/Graph.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
   <component name="ProjectId" id="1aDWkqmRYZz4KIFcq5NhHiKzbT5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/theme" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\agafo\GitHub\gpo-webgui\build\static" />
+      <recent name="C:\Users\agafo\GitHub\gpo-webgui\src" />
+      <recent name="C:\Users\agafo\GitHub\gpo-webgui\public" />
+      <recent name="C:\Users\agafo\GitHub\gpo-webgui\src\theme" />
+      <recent name="C:\Users\agafo\GitHub\gpo-webgui\src\components" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\agafo\GitHub\gpo-webgui\src\theme" />
+      <recent name="C:\Users\agafo\GitHub\gpo-webgui\src" />
+      <recent name="C:\Users\agafo\GitHub\gpo-webgui\build\static" />
+      <recent name="C:\Users\agafo\GitHub\gpo-webgui" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab29afaa-1bcb-41c1-b48c-a7ba9982ec94" name="Default Changelist" comment="" />
+      <created>1586270790046</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586270790046</updated>
+      <workItem from="1586270791650" duration="17574000" />
+      <workItem from="1586345097940" duration="11320000" />
+      <workItem from="1586359716651" duration="127000" />
+      <workItem from="1586359948450" duration="9459000" />
+      <workItem from="1586793180490" duration="2909000" />
+      <workItem from="1586963553246" duration="91000" />
+      <workItem from="1587009122441" duration="1053000" />
+      <workItem from="1587618556057" duration="3130000" />
+      <workItem from="1588008323044" duration="18000" />
+      <workItem from="1588597730863" duration="1097000" />
+      <workItem from="1588780630519" duration="3082000" />
+      <workItem from="1589423488144" duration="2122000" />
+      <workItem from="1589728643697" duration="117000" />
+      <workItem from="1589793351417" duration="22184000" />
+      <workItem from="1589899040942" duration="5589000" />
+      <workItem from="1589981275842" duration="14738000" />
+      <workItem from="1590035258567" duration="1844000" />
+      <workItem from="1590063640196" duration="1426000" />
+      <workItem from="1590574304180" duration="1726000" />
+      <workItem from="1590584984550" duration="107000" />
+      <workItem from="1590605878018" duration="5137000" />
+      <workItem from="1591094696050" duration="599000" />
+      <workItem from="1591291174051" duration="670000" />
+      <workItem from="1591471004876" duration="3895000" />
+      <workItem from="1591528289473" duration="871000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add request API.">
+      <created>1589821550175</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589821550175</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add reducers for time usage">
+      <created>1589821782472</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589821782472</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add JS Doc to reducers">
+      <created>1589822101168</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589822101168</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add Victory ref">
+      <created>1589825038739</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589825038739</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add time range action type">
+      <created>1589899087598</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1589899087598</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add victory dependency">
+      <created>1589899117286</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1589899117286</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add JSDoc to component">
+      <created>1590064120539</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1590064120539</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add month enums">
+      <created>1590064938852</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1590064938852</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add JSDoc to component">
+      <created>1590064964953</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1590064964953</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add request API." />
+    <MESSAGE value="Add reducers for time usage" />
+    <MESSAGE value="Add JS Doc to reducers" />
+    <MESSAGE value="Add Victory ref" />
+    <MESSAGE value="Add time range action type" />
+    <MESSAGE value="Add victory dependency" />
+    <MESSAGE value="Add month enums" />
+    <MESSAGE value="Add JSDoc to component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add JSDoc to component" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586357159943">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1586357159943" />
+    <state x="293" y="1" key="CommitChangelistDialog2" timestamp="1590064961675">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="293" y="1" key="CommitChangelistDialog2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1590064961675" />
+    <state x="-1804" y="116" width="1688" height="848" key="DiffContextDialog" timestamp="1591529160799">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1804" y="116" width="1688" height="848" key="DiffContextDialog/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1591529160799" />
+    <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1590064490211" />
+    <state x="541" y="174" key="FileChooserDialogImpl" timestamp="1589728758121">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="541" y="174" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1589728758121" />
+    <state x="0" y="0" key="MergeDialog" timestamp="1590063863861">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="-1920" y="0" key="MergeDialog/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1589793576059" />
+    <state x="0" y="0" key="MergeDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1590063863861" />
+    <state x="0" y="0" key="MergeDialog/0.0.1536.864@0.0.1536.864" timestamp="1587623309341" />
+    <state x="646" y="302" width="499" height="260" key="MultipleFileMergeDialog" timestamp="1590063750591">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="646" y="302" width="499" height="260" key="MultipleFileMergeDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1590063750591" />
+    <state x="553" y="135" key="RollbackChangesDialog" timestamp="1591474176111">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="-1229" y="169" key="RollbackChangesDialog/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1589794535538" />
+    <state x="553" y="135" key="RollbackChangesDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1591474176111" />
+    <state x="553" y="135" key="RollbackChangesDialog/0.0.1536.864@0.0.1536.864" timestamp="1587623358997" />
+    <state x="93" y="93" width="1350" height="678" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1589900708818">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="93" y="93" width="1350" height="678" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1589900708818" />
+    <state x="100" y="100" width="1336" height="664" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1590064803905">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="100" y="100" width="1336" height="664" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1590064803905" />
+    <state x="100" y="100" width="1336" height="664" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.864@0.0.1536.864" timestamp="1586357261755" />
+    <state x="536" y="347" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590064300736">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="-1250" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1589794528137" />
+    <state x="536" y="347" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1590064300736" />
+    <state x="536" y="347" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1588598211076" />
+    <state x="425" y="199" key="run.anything.popup" timestamp="1586346540227">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="425" y="199" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1586346540227" />
+    <state x="431" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1590609412295">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="185" width="672" height="678" key="search.everywhere.popup/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1590609412295" />
+    <state x="431" y="185" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1586365358850" />
   </component>
 </project>

@@ -13,7 +13,7 @@ import React from "react";
 const PushButton = props => {
         const buttonText = props.buttonText || '',
         onClick = props.onClick || (()=>{}),
-        btnCls = `default-pushbutton ${props.btnCls}` || 'default-pushbutton';
+        btnCls = props.btnCls ? `default-pushbutton ${props.btnCls}` : 'default-pushbutton';
         return (
                 <div className = {btnCls} onClick = {onClick}>
                     {buttonText}

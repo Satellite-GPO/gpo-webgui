@@ -40,3 +40,49 @@ input::-webkit-inner-spin-button {
 .default-inputCls input[type=number] {
     -moz-appearance: textfield;
 }
+
+.modal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(109, 109, 109, 0.55);
+    z-index: 99999;
+}
+
+.modal-content.default-window {
+    width: 300px;
+    padding: 20px;
+    height: 200px;
+    position: relative;
+    top: 25%;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(113,113,113,0.75);
+}
+.default-window-title {
+    font-weight: bold;
+    color: #212124;
+    font-size: 17px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 20px;
+    border-bottom: 2px solid rgb(113, 113, 133);
+}
+
+.default-window {
+    padding: 20px;
+    width: 300px;
+    height: 100px;
+    position: relative;
+    top: 25%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: whitesmoke;
+}
+
+.default-window-content{
+    padding-top: 10px;
+}
+

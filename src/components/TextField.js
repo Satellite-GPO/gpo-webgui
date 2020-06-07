@@ -16,7 +16,7 @@ import React from "react";
 * */
 const TextField = props => {
         const fieldName = `${props.fieldName}:` || '',
-            inputCls = `default-inputCls ${props.inputCls}` || 'default-inputCls',
+            inputCls = props.inputCls ? `default-inputCls ${props.inputCls}` : 'default-inputCls',
             fieldStyle = props.fieldStyle || {},
             readOnly = props.readOnly || false,
             type = props.type || 'text',

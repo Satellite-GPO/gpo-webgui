@@ -11,6 +11,7 @@ import {actionTypes} from "../../ActionTypes";
 import TextField from "../TextField";
 import PushButton from "../PushButton";
 import Graph from "../Graph/Graph";
+import Window from "../Window";
 
 import jsonResponse from "../../response.json"
 
@@ -97,10 +98,10 @@ function setDMSFormat(value = '') {
 * @param {Function} setGraphVisibleCall - функция-вызов графа
 * */
 async function sendData(params, setGraphVisibleCall) {
-    if(!isFormDataValid(params)){
-        alert('Form is not valid!')
-        return;
-    }
+    // if(!isFormDataValid(params)){
+    //     alert('Form is not valid!')
+    //     return;
+    // }
     const timeRange = {
         from: params.from,
         to: params.to
@@ -132,7 +133,48 @@ async function getResponseData(response, timeRange, setGraphVisibleCall) {
         console.error(response.error_code)
         return;
     }
-    setGraphVisibleCall(<Graph data={response.data} timeRange={timeRange}/>);
+    const saveWin =
+    <Window isModal={true}
+        title={lang.graphWindow.saveDataWin.title}
+        className={'save-data-window'}>
+        <div>
+            <label>
+                <input type='checkbox' aria-label={'as'}/>
+                {lang.graphWindow.saveDataWin.saveSvg}
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type='checkbox' aria-label={'as'}/>
+                {lang.graphWindow.saveDataWin.saveData}
+            </label>
+        </div>
+        <div className={'bottom-bar'}>
+            <PushButton btnCls={'save-data-window-saveBtn'}
+                        buttonText={lang.saveBtn}/>
+        </div>
+    </Window>;
+
+    setGraphVisibleCall(<Graph data={response.data} timeRange={timeRange} saveWin={<Window isModal={true}
+                                                                                           title={lang.graphWindow.saveDataWin.title}
+                                                                                           className={'save-data-window'}>
+        <div>
+            <label>
+                <input type='checkbox' aria-label={'as'}/>
+                {lang.graphWindow.saveDataWin.saveSvg}
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type='checkbox' aria-label={'as'}/>
+                {lang.graphWindow.saveDataWin.saveData}
+            </label>
+        </div>
+        <div className={'bottom-bar'}>
+            <PushButton btnCls={'save-data-window-saveBtn'}
+                        buttonText={lang.saveBtn}/>
+        </div>
+    </Window>}/>);
 }
 
 /**

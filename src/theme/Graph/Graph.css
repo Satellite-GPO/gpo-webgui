@@ -21,3 +21,8 @@
 .graph-wrapper .bottom-bar {
     z-index: 2000
 }
+
+.save-data-window-saveBtn {
+    float: right;
+    margin-top: 80px;
+}

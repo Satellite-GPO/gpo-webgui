@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from 'react-dom';
 import '../../theme/Graph/Graph.css'
 
 import {VictoryChart, VictoryLine} from 'victory'
@@ -8,11 +9,12 @@ import PushButton from "../PushButton";
 const Graph = props => {
     const data = props.data || [],
         timeRange = props.timeRange,
-        categories = {x: []};
-
+        categories = {x: []},
+        saveWin = props.saveWin;
     for(let item of data) {
         categories.x.push(`Day${item.day}`);
     }
+
     return(
         <div id='graphWrapper' className={'graph-wrapper'}>
             <div id={'graph'} className={'graph'}>
@@ -34,11 +36,15 @@ const Graph = props => {
                 <PushButton
                     buttonText={'Сохранить'}
                     btnCls={'bottom-btn'}
-                    onClick={saveSvg}
+                    onClick={save(saveWin)}
                 />
             </div>
         </div>
     )
+}
+
+function save(component) {
+    console.log(document.getElementById('graphWrapper'))
 }
 
 function saveSvg(e) {

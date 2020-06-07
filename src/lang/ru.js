@@ -9,6 +9,15 @@ export const ru = {
             send:'Отправить'
         }
     },
+    saveBtn: 'Сохранить',
+    cancelBtn: 'Отмена',
+    graphWindow: {
+        saveDataWin: {
+            title: 'Получение данных',
+            saveSvg: 'Скачать график в формате SVG',
+            saveData: 'Скачать данные в текстовом формате'
+        }
+    },
 
     monthText:{
         jan: 'Январь',
