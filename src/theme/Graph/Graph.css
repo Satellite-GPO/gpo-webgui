@@ -18,11 +18,13 @@
     cursor: pointer!important;
 }
 
-.graph-wrapper .bottom-bar {
-    z-index: 2000
-}
-
-.save-data-window-saveBtn {
+.get-data-win .bottom-bar {
     float: right;
-    margin-top: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 80px 0 0 0;
+}
+.get-data-win .bottom-bar-btn {
+    display: inline-block;
+    margin-left: 10px;
 }

@@ -8,11 +8,10 @@ const Window = props => {
         contentCls = props.contentCls ? `default-window-content ${props.contentCls}` : 'default-window-content',
         cls = props.cls ? `default-window ${props.cls}` : 'default-window';
 
-
     if(isModal)
         return (
         <div className={'modal'}>
-            <div className={`modal-content ${cls}`}>
+            <div className={`modal-content ${cls}`} >
                 {hasTitle && <div className={titleCls}>{title}</div>}
                 {props.children ? <div className={contentCls}>{props.children}</div> : null}
             </div>
