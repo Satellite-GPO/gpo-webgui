@@ -6,12 +6,10 @@ import ControlPanel from "./components/ControlPanel/ControlPanel";
 
 
 function App() {
-    const style = {
-        height: window.innerHeight+'px'
-    };
+
 
     return (
-        <div id="App" className="App" style={style}>
+        <div id="App" className="App" >
             <ControlPanel/>
             <MapContainer/>
         </div>
