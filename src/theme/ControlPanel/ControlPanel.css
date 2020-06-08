@@ -1,4 +1,5 @@
 .control-panel{
+    position: absolute;
     width: 450px;
     min-height: 420px;
     height: 100%;

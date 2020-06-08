@@ -1,4 +1,4 @@
- import React,{useState,useEffect} from "react";
+import React,{useState} from "react";
 import '../../theme/gis/MapContainer.css'
 
 import MapReact from "./MapReact";
@@ -9,10 +9,14 @@ import MapReact from "./MapReact";
 * @params {Object} props - объек с конфигурацией обвёртки
 * */
 const MapContainer = props => {
-    const [style,setStyle] = useState({width: window.innerWidth-20+'px',height: window.innerHeight-20+'px'})
-    // useEffect(() => {
-    //     setStyle({width: window.innerWidth-450-20+'px',height: window.innerHeight+'px'})
-    // },[window.innerWidth,window.innerHeight])
+    const [style,setStyle]=useState({height: window.innerHeight+'px',width:window.innerWidth-470+'px'});
+     window.onresize= event => {
+         if(style.height!==window.innerHeight)
+            setStyle({height: window.innerHeight+'px'})
+        if(style.width-470!==window.innerWidth-470)
+            setStyle({width: window.innerWidth-470+'px'})
+         return style;
+     };
     return (
         <div className={'map-container-wrap'}
             style={style}>

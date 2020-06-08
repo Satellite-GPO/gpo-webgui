@@ -24,10 +24,9 @@ import Graph from "../Graph/Graph";
 const ControlPanel = props => {
     const [graph, setGraphVisible] = React.useState(false),
         [sendBtnDisabled,setSendBtnDisabled] = React.useState(false);
-    const title = props.title || lang.controlPanel.title,
-        style={height: `${window.innerHeight}px`}
+    const title = props.title || lang.controlPanel.title;
     return (
-        <div id={'controlPanel'} className={'control-panel'} onClick={onTimeRangeChange} style={style}>
+        <div id={'controlPanel'} className={'control-panel'} onClick={onTimeRangeChange}>
             <header className={'panel-header'}>
                 {title}
             </header>
