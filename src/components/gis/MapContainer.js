@@ -10,7 +10,7 @@ import MapReact from "./MapReact";
 * */
 const MapContainer = props => {
     const [style,setStyle]=useState({height: window.innerHeight+'px',width:window.innerWidth-470+'px'});
-     window.onresize= event => {
+     window.addEventListener= event => {
          if(style.height!==window.innerHeight)
             setStyle({height: window.innerHeight+'px'})
         if(style.width-470!==window.innerWidth-470)

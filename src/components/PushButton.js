@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import MapContainer from "./gis/MapContainer";
 
 /**
  * PushButton - кнопка
@@ -21,11 +22,11 @@ const PushButton = props => {
         if(window.innerHeight>400)
                 startPosition=window.innerHeight;
         const [style,setStyle]=useState({top:startPosition-50+'px'});
-        window.addEventListener=('resize',event => {
-                if(style.top!==window.innerHeight-50&&window.innerHeight>400)
+        window.onresize= event => {
+                if(window.innerHeight>400)
                         setStyle({top:window.innerHeight-50+'px'});
                 return style
-        });
+        };
         if(disabled) {
                 onClick = ()=>{};
                 btnCls = `default-pushbutton-disabled ${btnCls}`;
