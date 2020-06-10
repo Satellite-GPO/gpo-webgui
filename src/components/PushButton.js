@@ -17,7 +17,6 @@ const PushButton = props => {
             disabled = props.isDisabled || false,
             btnCls = props.btnCls ? `default-pushbutton ${props.btnCls}` : 'default-pushbutton',
             onClick = props.onClick || (()=>{});
-        console.log('disabled:', disabled);
         let startPosition=400;
         if(window.innerHeight>400)
                 startPosition=window.innerHeight;
