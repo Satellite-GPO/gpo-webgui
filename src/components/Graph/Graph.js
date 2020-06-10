@@ -10,10 +10,10 @@ import Window from "../Window";
 
 const Graph = props => {
     const data = props.data || [],
-        timeRange = props.timeRange,
         setGraphVisible = props.setGraphVisible || (() => {})(),
         categories = {x: []};
-    const [getDataWin, setGetDataWinVisible] = React.useState(false);
+    const [getDataWin, setGetDataWinVisible] = React.useState(false),
+        [saveBtnDisabled, setSaveBtnDisabled] = React.useState(true);
     for(let item of data) {
         categories.x.push(`Day${item.day}`);
     }
@@ -42,7 +42,7 @@ const Graph = props => {
                 <PushButton
                     buttonText={lang.saveBtn}
                     btnCls={'bottom-btn'}
-                    onClick={save.bind(this,setGetDataWinVisible, data)}
+                    onClick={save.bind(this,setGetDataWinVisible, data, saveBtnDisabled, setSaveBtnDisabled)}
                 />
             </div>
             {getDataWin}
@@ -54,21 +54,29 @@ const Graph = props => {
  * Функция вызывает модальное окно сохранения данных
  * @param {Function} setVisibleHook - хук для отображения модального окна
  * @param {Array} data - данные для скачки в txt
+ * @param {Boolean} saveBtnDisabled - проверка на отключения кнопки
+ * @param {Function} setSaveBtnDisabledHook - хук для отключения копки
  * */
-function save(setVisibleHook, data) {
+function save(setVisibleHook, data, saveBtnDisabled, setSaveBtnDisabledHook) {
     setVisibleHook(
         <Window isModal={true}
                 title={lang.graphWindow.saveDataWin.title}
                 cls = {'get-data-win'}>
             <div>
                 <label>
-                    <input id='saveAsSvg' type='checkbox' aria-label={'as'}/>
+                    <input id='saveAsSvg'
+                           type='checkbox'
+                           aria-label={'as'}
+                           onChange={checkboxListener.bind(this, setSaveBtnDisabledHook)}/>
                     {lang.graphWindow.saveDataWin.saveSvg}
                 </label>
             </div>
             <div>
                 <label>
-                    <input id='saveAsText' type='checkbox' aria-label={'as'}/>
+                    <input id='saveAsText'
+                           type='checkbox'
+                           aria-label={'as'}
+                           onChange={checkboxListener.bind(this, setSaveBtnDisabledHook)}/>
                     {lang.graphWindow.saveDataWin.saveData}
                 </label>
             </div>
@@ -82,6 +90,14 @@ function save(setVisibleHook, data) {
             </div>
         </Window>
     )
+}
+
+function checkboxListener(setSaveBtnDisabledHook) {
+    const dom = document,
+        hasSaveAsSvgSelected = dom.getElementById('saveAsSvg').checked,
+        hasSaveAsTextSelected = dom.getElementById('saveAsText').checked;
+    console.log(hasSaveAsTextSelected || hasSaveAsSvgSelected);
+    setSaveBtnDisabledHook(hasSaveAsTextSelected || hasSaveAsSvgSelected);
 }
 
 /**

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import "../../theme/ControlPanel/ControlPanel.css"
 import {lang} from '../../lang/lang.js'
 import {RequestAPI} from '../../RequestAPI'
@@ -22,9 +22,9 @@ import Graph from "../Graph/Graph";
 * @param {Object} props.store  - динамические данные в панели управления
 * */
 const ControlPanel = props => {
-    const [graph, setGraphVisible] = React.useState(false),
-        [sendBtnDisabled,setSendBtnDisabled] = React.useState(false);
-    const title = props.title || lang.controlPanel.title;
+    const [sendBtnDisabled,setSendBtnDisabled] = React.useState(false);
+    const title = props.title || lang.controlPanel.title,
+        setGraphVisible = props.setGraphComponentHook;
     return (
         <div id={'controlPanel'} className={'control-panel'} onClick={onTimeRangeChange}>
             <header className={'panel-header'}>
@@ -62,17 +62,16 @@ const ControlPanel = props => {
                 <PushButton
                     buttonText={lang.controlPanel.fields.send}
                     onClick={() => {
-                        sendData(props.store, setGraphVisible);
-                        setSendBtnDisabled(true);
+                        sendData(props.store, setGraphVisible).then(r => r && setSendBtnDisabled(true))
                         }
                     }
                     key={'pushButtonSend'}
                     isDisabled = {sendBtnDisabled}
                     btnCls={'panel-pushButtonSend'}
                 />
-                {graph}
             </div>
         </div>
+
     );
 }
 
@@ -104,7 +103,7 @@ function setDMSFormat(value = '') {
 async function sendData(params, setGraphVisibleCall) {
     if(!isFormDataValid(params)){
         alert('Form is not valid!')
-        return;
+        return false;
     }
     const timeRange = {
         from: params.from,
@@ -122,7 +121,9 @@ async function sendData(params, setGraphVisibleCall) {
     //  Переводим данные в формат: {День - Значение сигнала}
     response.data = response.data.map((item, index) => {return {day: index+1, y: item}});
 
-    await getResponseData(response, timeRange, setGraphVisibleCall)
+    await getResponseData(response, timeRange, setGraphVisibleCall);
+
+    return true;
 }
 /**
 * Асинхронная коллбэк-функция, обрабатывающая ответ от сервера
@@ -140,7 +141,7 @@ async function getResponseData(response, timeRange, setGraphVisibleCall) {
         return;
     }
 
-    setGraphVisibleCall(<Graph key="test" data={response.data} timeRange={timeRange} setGraphVisible={(isVisible) => {setGraphVisibleCall(isVisible)}}/>);
+    setGraphVisibleCall(<Graph data={response.data} timeRange={timeRange} setGraphVisible={(isVisible) => {setGraphVisibleCall(isVisible)}}/>);
 }
 
 /**

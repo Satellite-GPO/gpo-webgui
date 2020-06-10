@@ -6,12 +6,13 @@ import ControlPanel from "./components/ControlPanel/ControlPanel";
 
 
 function App() {
-
+    const [graph, setGraphComponent] = React.useState(null);
 
     return (
         <div id="App" className="App" >
-            <ControlPanel/>
+            <ControlPanel setGraphComponentHook = {setGraphComponent}/>
             <MapContainer/>
+            {graph}
         </div>
     );
 }
